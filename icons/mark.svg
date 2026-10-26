@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- סמל ארבעת העיגולים של מהלך ההכלה הירושלמי (שרטוט וקטורי לאייקון) -->
+  <defs>
+    <clipPath id="c1"><circle cx="186" cy="186" r="66"/></clipPath>
+    <clipPath id="c2"><circle cx="326" cy="186" r="66"/></clipPath>
+    <clipPath id="c3"><circle cx="186" cy="326" r="66"/></clipPath>
+    <clipPath id="c4"><circle cx="326" cy="326" r="66"/></clipPath>
+  </defs>
+  <rect width="512" height="512" fill="#ffffff"/>
+  <g transform="translate(256 256) scale(1.1) translate(-256 -256)">
+  <!-- רקע לבן משותף עם קו מתאר אפור -->
+  <g fill="#d9d9d9">
+    <circle cx="186" cy="186" r="86"/><circle cx="326" cy="186" r="86"/>
+    <circle cx="186" cy="326" r="86"/><circle cx="326" cy="326" r="86"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="186" cy="186" r="83"/><circle cx="326" cy="186" r="83"/>
+    <circle cx="186" cy="326" r="83"/><circle cx="326" cy="326" r="83"/>
+  </g>
+  <circle cx="256" cy="256" r="56" fill="#ffffff"/>
+  <!-- כתום -->
+  <circle cx="186" cy="186" r="66" fill="#f7863a"/>
+  <circle cx="220" cy="222" r="66" fill="#fbc8a4" clip-path="url(#c1)"/>
+  <!-- ורוד -->
+  <circle cx="326" cy="186" r="66" fill="#ef4a9b"/>
+  <circle cx="292" cy="222" r="66" fill="#f9c4e0" clip-path="url(#c2)"/>
+  <!-- ירוק -->
+  <circle cx="186" cy="326" r="66" fill="#86c96f"/>
+  <circle cx="220" cy="290" r="66" fill="#c9e5b8" clip-path="url(#c3)"/>
+  <!-- כחול -->
+  <circle cx="326" cy="326" r="66" fill="#4ab3e8"/>
+  <circle cx="292" cy="290" r="66" fill="#b7e0f6" clip-path="url(#c4)"/>
+  </g>
+</svg>

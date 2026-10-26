@@ -1,0 +1,20 @@
+rules_version = '2';
+
+// כללי האבטחה של יומן הליווי.
+// 1. רק חשבונות שהמייל שלהם מופיע ברשימה config/access (שדה emails) יכולים להשתמש באפליקציה.
+// 2. כל מנחה ניגשת רק למידע שלה, תחת users/<המזהה שלה>.
+// 3. את רשימת המיילים אי אפשר לקרוא או לשנות מהאפליקציה — רק ממסוף Firebase.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isApproved() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() in get(/databases/$(database)/documents/config/access).data.emails;
+    }
+
+    match /users/{uid}/{document=**} {
+      allow read, write: if isApproved() && request.auth.uid == uid;
+    }
+  }
+}
